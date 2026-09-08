@@ -1,0 +1,24 @@
+{
+  "name": "jira-pr-linker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chrome extension that links Jira ticket keys found in GitHub PR titles and descriptions.",
+  "scripts": {
+    "test": "jest",
+    "package": "node scripts/package.js",
+    "version": "node scripts/sync-manifest-version.js && git add manifest.json"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "overrides": {
+    "browserslist": "4.24.0",
+    "electron-to-chromium": "1.5.4",
+    "caniuse-lite": "1.0.30001651",
+    "@types/node": "20.14.2"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}

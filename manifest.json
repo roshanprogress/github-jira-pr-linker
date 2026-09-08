@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Jira PR Linker",
+  "version": "1.0.0",
+  "description": "Turns Jira ticket keys in GitHub PR titles and descriptions into clickable links.",
+  "permissions": [
+    "storage"
+  ],
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*/pull/*"
+      ],
+      "js": [
+        "src/linker.js",
+        "src/selectors.js",
+        "src/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
